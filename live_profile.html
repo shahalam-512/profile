@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Alam | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            color: #cbd5e0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-button {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .nav-button:hover {
+            background-color: #4a5568;
+            transform: translateY(-2px);
+        }
+        .hero {
+            background: url('images/IMG_3318.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <div class="dot" id="dot"></div>
+    <section class="hero">
+        <h1 class="text-5xl font-bold text-white">Shah Alam</h1>
+        <p class="text-xl text-gray-300">Final-Year CS Student | AI Enthusiast | Web Developer</p>
+        <nav class="mt-6 flex space-x-4">
+            <button class="nav-button bg-gray-700 text-white px-4 py-2 rounded-lg" onclick="scrollToSection('about')">About</button>
+            <button class="nav-button bg-gray-700 text-white px-4 py-2 rounded-lg" onclick="scrollToSection('skills')">Skills</button>
+            <button class="nav-button bg-gray-700 text-white px-4 py-2 rounded-lg" onclick="scrollToSection('projects')">Projects</button>
+            <button class="nav-button bg-gray-700 text-white px-4 py-2 rounded-lg" onclick="scrollToSection('experience')">Experience</button>
+            <button class="nav-button bg-gray-700 text-white px-4 py-2 rounded-lg" onclick="scrollToSection('certifications')">Certifications</button>
+        </nav>
+    </section>
+
+    <section id="about" class="text-center p-10 bg-gray-800 rounded-lg shadow-lg mb-10">
+        <h2 class="text-3xl font-semibold mb-3">About Me</h2>
+        <p class="text-lg">I am a final-year Computer Science student at FAST National University with a passion for AI, Generative AI, Digital Image Processing, Secure Software Design, and Social Networking.</p>
+    </section>
+    
+    <section id="skills" class="p-10 bg-gray-900 rounded-lg shadow-lg mb-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-blue-700 rounded-lg shadow-md hover:scale-105 transition">
+                <h3 class="font-bold">Artificial Intelligence</h3>
+                <p>Experience with deep learning, model development, and neural networks.</p>
+            </div>
+            <div class="p-6 bg-green-700 rounded-lg shadow-md hover:scale-105 transition">
+                <h3 class="font-bold">Web Development</h3>
+                <p>Building responsive websites with HTML, CSS, JavaScript, and Tailwind.</p>
+            </div>
+            <div class="p-6 bg-purple-700 rounded-lg shadow-md hover:scale-105 transition">
+                <h3 class="font-bold">Digital Image Processing</h3>
+                <p>Expertise in image enhancement and feature extraction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="p-10 bg-gray-800 rounded-lg shadow-lg mb-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-orange-700 rounded-lg shadow-md hover:scale-105 transition">
+                <h3 class="font-bold">Bookistics</h3>
+                <p>AI-powered book marketplace for buying and selling books.</p>
+            </div>
+            <div class="p-6 bg-red-700 rounded-lg shadow-md hover:scale-105 transition">
+                <h3 class="font-bold">Gradio Speech-to-Text</h3>
+                <p>Developed a speech recognition tool using AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="p-10 bg-gray-900 rounded-lg shadow-lg mb-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Experience</h2>
+        <p class="text-lg text-center">Worked on multiple AI-based projects and research papers in AI and secure software design.</p>
+    </section>
+    
+    <section id="certifications" class="p-10 bg-gray-800 rounded-lg shadow-lg mb-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Certifications</h2>
+        <ul class="list-disc text-lg ml-10">
+            <li>Api penetration testing course - APIsec University</li>
+            <li>Api injection assesment - APIsec University</li>
+            <li>Improper Assets management - APIsec University</li>
+            <li>Secure Software Development - FAST University</li>
+        </ul>
+    </section>
+    
+    <footer class="text-center p-6 bg-gray-700 rounded-lg shadow-lg">
+        <p class="text-sm">Contact: <a href="mailto:f201039@cfd.nu.edu.pk" class="text-blue-400 hover:underline">f201039@cfd.nu.edu.pk</a></p>
+        <p class="text-sm">GitHub: <a href="https://github.com/shahalam-512" class="text-blue-400 hover:underline">shahalam-512</a></p>
+    </footer>
+</body>
+</html>
